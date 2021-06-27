@@ -5,7 +5,7 @@
 *.spec
 .coverage
 htmlcov/*
-venv/*
+venv*/*
 dist/*
 build/*
 refs/*

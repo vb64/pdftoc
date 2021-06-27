@@ -57,4 +57,4 @@ setup_pip:
 	$(PIP) -r $(TESTS)/requirements.txt
 
 setup_python:
-	$(PYTHON_BIN) -m venv ./venv
+	$(PYTHON_BIN) -m virtualenv venv

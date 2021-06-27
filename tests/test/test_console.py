@@ -8,8 +8,9 @@ from . import TestBase
 class TestConsole(TestBase):
     """Tests console client."""
 
-    def test_default(self):
+    @staticmethod
+    def test_default():
         """Call without args."""
-        from source import main
+        from source.cli import main
 
         assert main() == 0
