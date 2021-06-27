@@ -10,4 +10,5 @@ Download and install:
 Resources:
 
 - [How can I extract the TOC with PyPDF2?](https://stackoverflow.com/questions/48157194/how-can-i-extract-the-toc-with-pypdf2)
+- [PyPDF2](https://github.com/mstamy2/PyPDF2)
 - [PyPDF2 Documentation](https://pythonhosted.org/PyPDF2/)
