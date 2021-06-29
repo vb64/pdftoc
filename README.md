@@ -1,14 +1,53 @@
-# PdfTOC
+# PdfTOC utility
 
-Merge several pdf files and generate TOC for result.
+Merging several pdf files and generate hierarchy TOC for the resulting pdf. TOC and set of source pdf files are defining in JSON file.
+
+Usage:
+```bash
+pdftoc toc.json
+```
+
+For example, to produce resulting `Merged report.pdf` file from `fixtures/example.pdf` with hierarchical TOC:
+
+![Merged report.pdf](fixtures/example.jpg)
+
+Use the following `toc.json` file:
+
+```json
+{
+  "target": "Merged report.pdf",
+  "folder": "fixtures",
+  "toc": [
+    ["Level 0", "", [
+      ["Level 1", "{f}example.pdf", []],
+      ["Level 1", "{f}example.pdf", [
+        ["Level 2", "{f}example.pdf", []],
+        ["Level 2", "{f}example.pdf", []]
+      ]],
+      ["Level 1", "{f}example.pdf", []]
+    ]],
+    ["Level 0", "{f}example.pdf", []]
+  ]
+}
+```
+
+Sequence "{f}" is optional placeholder. It will be replaced with the value of "folder" key ('fixtures' in the given example).
+
+You can download the ready win64 binary executable or create your version from sources.
 
 Download and install:
 
-- [Python 3.8](https://www.python.org/downloads/release/python-3810/)
+- [Python 3](https://www.python.org/downloads/release/python-3810/)
 - GNU [Unix Utils](http://unxutils.sourceforge.net/) for makefile operation
 
-Resources:
+Then
 
-- [How can I extract the TOC with PyPDF2?](https://stackoverflow.com/questions/48157194/how-can-i-extract-the-toc-with-pypdf2)
-- [PyPDF2](https://github.com/mstamy2/PyPDF2)
-- [PyPDF2 Documentation](https://pythonhosted.org/PyPDF2/)
+```bash
+git clone git@github.com:vb64/pdftoc.git
+cd pdftoc
+make setup PYTHON_BIN=/path/to/python3/executable
+make tests
+make exe
+```
+
+`pdftoc.exe` will be created in `dist` subfolder.

@@ -3,6 +3,7 @@
 *.log
 *.pot
 *.spec
+*.pdf
 .coverage
 htmlcov/*
 venv*/*

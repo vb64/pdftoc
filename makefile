@@ -19,7 +19,7 @@ SOURCE = source
 TESTS = tests
 
 PYTEST = $(PTEST) --cov=$(SOURCE) --cov-report term:skip-covered
-LINT = $(PYTHON) -m pylint --load-plugins=pylint.extensions.mccabe --max-complexity=10
+LINT = $(PYTHON) -m pylint  --init-hook="sys.path.insert(0, './')" --load-plugins=pylint.extensions.mccabe --max-complexity=10
 
 all: exe
 
@@ -57,4 +57,4 @@ setup_pip:
 	$(PIP) -r $(TESTS)/requirements.txt
 
 setup_python:
-	$(PYTHON_BIN) -m virtualenv venv
+	$(PYTHON_BIN) -m venv ./venv
