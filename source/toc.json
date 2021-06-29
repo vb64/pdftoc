@@ -1,0 +1,15 @@
+{
+  "target": "Merged report.pdf",
+  "folder": "fixtures",
+  "toc": [
+    ["Level 0", "", [
+      ["Level 1", "{f}example.pdf", []],
+      ["Level 1", "{f}example.pdf", [
+        ["Level 2", "{f}example.pdf", []],
+        ["Level 2", "{f}example.pdf", []]
+      ]],
+      ["Level 1", "{f}example.pdf", []]
+    ]],
+    ["Level 0", "{f}example.pdf", []]
+  ]
+}
