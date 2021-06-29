@@ -1,4 +1,5 @@
 # PdfTOC utility
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/vb64/pdftoc/pdftoc%20pep257?label=Pep257&style=plastic)](https://github.com/vb64/pdftoc/actions?query=workflow%3A%22pdftoc+pep257%22)
 
 Merging several pdf files and generate hierarchy TOC for the resulting pdf. TOC and set of source pdf files are defining in JSON file.
 
