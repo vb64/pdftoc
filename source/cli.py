@@ -10,7 +10,7 @@ VERSION = '1.0'
 
 OPTS = None
 PARSER = OptionParser(
-  usage='Usage: %prog toc.json\nor %prog --help',
+  usage='Usage: %prog toc.json\n\nvizit https://github.com/vb64/pdftoc for more info.',
   version="%prog version {}".format(VERSION)
 )
 FOLDER = '{f}'
