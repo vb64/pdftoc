@@ -1,6 +1,6 @@
 # PdfTOC utility
 [![GitHub Workflow Status](https://img.shields.io/github/workflow/status/vb64/pdftoc/pdftoc%20pep257?label=Pep257&style=plastic)](https://github.com/vb64/pdftoc/actions?query=workflow%3A%22pdftoc+pep257%22)
-[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/vb64/pdftoc/pdftoc%20tests?label=Python%203.7%203.8&style=plastic)](https://github.com/vb64/pdftoc/actions?query=workflow%3A%22pdftoc+tests%22)
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/vb64/pdftoc/pdftoc%20tests?label=Python%203.6%203.7%203.8%203.9&style=plastic)](https://github.com/vb64/pdftoc/actions?query=workflow%3A%22pdftoc+tests%22)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/aa5f850432ca45408ab72c002f0689ea)](https://www.codacy.com/gh/vb64/pdftoc/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=vb64/pdftoc&amp;utm_campaign=Badge_Grade)
 [![Codacy Badge](https://app.codacy.com/project/badge/Coverage/aa5f850432ca45408ab72c002f0689ea)](https://www.codacy.com/gh/vb64/pdftoc/dashboard?utm_source=github.com&utm_medium=referral&utm_content=vb64/pdftoc&utm_campaign=Badge_Coverage)
 
