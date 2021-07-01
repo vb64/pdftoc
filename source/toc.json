@@ -1,5 +1,5 @@
 {
-  "target": "Merged report.pdf",
+  "target": "build/output/Merged report.pdf",
   "folder": "fixtures",
   "toc": [
     ["Level 0", "", [

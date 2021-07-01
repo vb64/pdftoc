@@ -2,7 +2,7 @@
 import os
 import sys
 import json
-from optparse import OptionParser
+from optparse import OptionParser  # pylint: disable=deprecated-module
 from PyPDF2 import PdfFileReader, PdfFileWriter
 
 COPYRIGHTS = 'Copyrights by Vitaly Bogomolov 2021'
@@ -82,6 +82,10 @@ def main(argv, _options):
     merger = PdfFileWriter()
     make(merger, data["toc"], data["folder"], None, bookmarks)
     bookmarks.link(merger)
+
+    out_folder = os.path.dirname(data["target"])
+    if not os.path.isdir(out_folder):
+        os.makedirs(out_folder, exist_ok=True)
 
     with open(data["target"], "wb") as output:
         merger.write(output)
