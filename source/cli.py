@@ -6,7 +6,7 @@ from optparse import OptionParser  # pylint: disable=deprecated-module
 from PyPDF2 import PdfFileReader, PdfFileWriter
 
 COPYRIGHTS = 'Copyrights by Vitaly Bogomolov 2021'
-VERSION = '1.0'
+VERSION = '1.1'
 
 OPTS = None
 PARSER = OptionParser(
