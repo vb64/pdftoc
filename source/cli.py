@@ -83,10 +83,7 @@ def main(argv, _options):
     make(merger, data["toc"], data["folder"], None, bookmarks)
     bookmarks.link(merger)
 
-    out_folder = os.path.dirname(data["target"])
-    if not os.path.isdir(out_folder):
-        os.makedirs(out_folder, exist_ok=True)
-
+    os.makedirs(os.path.dirname(data["target"]), exist_ok=True)
     with open(data["target"], "wb") as output:
         merger.write(output)
 
