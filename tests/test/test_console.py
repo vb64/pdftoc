@@ -22,3 +22,9 @@ class TestConsole(TestBase):
         from source.cli import main
 
         assert main([os.path.join('source', 'toc.json')], self.options) == 0
+
+    def test_nodirs(self):
+        """Target without dirs."""
+        from source.cli import main
+
+        assert main([os.path.join('fixtures', 'nodir.json')], self.options) == 0
