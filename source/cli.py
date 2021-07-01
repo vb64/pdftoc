@@ -2,11 +2,11 @@
 import os
 import sys
 import json
-from optparse import OptionParser
+from optparse import OptionParser  # pylint: disable=deprecated-module
 from PyPDF2 import PdfFileReader, PdfFileWriter
 
 COPYRIGHTS = 'Copyrights by Vitaly Bogomolov 2021'
-VERSION = '1.0'
+VERSION = '1.1'
 
 OPTS = None
 PARSER = OptionParser(
@@ -62,7 +62,8 @@ def make(merger, toc, default_folder, parent, bookmarks):
             )
         new_parent = bookmarks.add(title, merger.getNumPages(), parent)
         if pdf:
-            merger.appendPagesFromReader(PdfFileReader(open(pdf, 'rb')))
+            print(pdf)
+            merger.appendPagesFromReader(PdfFileReader(open(pdf, 'rb')))  # pylint: disable=consider-using-with
 
         if childs:
             make(merger, childs, default_folder, new_parent, bookmarks)
@@ -78,11 +79,12 @@ def main(argv, _options):
         return 1
 
     bookmarks = Bookmarks()
-    data = json.loads(open(argv[0], encoding='utf-8').read())
+    data = json.loads(open(argv[0], encoding='utf-8').read())  # pylint: disable=consider-using-with
     merger = PdfFileWriter()
     make(merger, data["toc"], data["folder"], None, bookmarks)
     bookmarks.link(merger)
 
+    os.makedirs(os.path.dirname(data["target"]), exist_ok=True)
     with open(data["target"], "wb") as output:
         merger.write(output)
 

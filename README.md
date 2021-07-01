@@ -11,7 +11,7 @@ Usage:
 pdftoc toc.json
 ```
 
-For example, to produce resulting `Merged report.pdf` file from `fixtures/example.pdf` with hierarchical TOC:
+For example, to produce resulting `build/output/Merged report.pdf` file from `fixtures/example.pdf` with hierarchical TOC:
 
 ![Merged report.pdf](fixtures/example.jpg)
 
@@ -19,7 +19,7 @@ Use the following `toc.json` file:
 
 ```json
 {
-  "target": "Merged report.pdf",
+  "target": "build/output/Merged report.pdf",
   "folder": "fixtures",
   "toc": [
     ["Level 0", "", [
