@@ -37,7 +37,7 @@ Use the following `toc.json` file:
 
 Sequence "{f}" is optional placeholder. It will be replaced with the value of "folder" key ('fixtures' in the given example).
 
-You can download the ready [win64 binary executable](https://github.com/vb64/pdftoc/releases/download/v.1.0/pdftoc.exe) or create your version from sources.
+You can download the ready [win64 binary executable](https://github.com/vb64/pdftoc/releases/download/v.1.1/pdftoc.exe) or create your version from sources.
 
 Download and install:
 
