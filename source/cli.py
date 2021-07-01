@@ -62,7 +62,8 @@ def make(merger, toc, default_folder, parent, bookmarks):
             )
         new_parent = bookmarks.add(title, merger.getNumPages(), parent)
         if pdf:
-            merger.appendPagesFromReader(PdfFileReader(open(pdf, 'rb')))
+            print(pdf)
+            merger.appendPagesFromReader(PdfFileReader(open(pdf, 'rb')))  # pylint: disable=consider-using-with
 
         if childs:
             make(merger, childs, default_folder, new_parent, bookmarks)
@@ -78,7 +79,7 @@ def main(argv, _options):
         return 1
 
     bookmarks = Bookmarks()
-    data = json.loads(open(argv[0], encoding='utf-8').read())
+    data = json.loads(open(argv[0], encoding='utf-8').read())  # pylint: disable=consider-using-with
     merger = PdfFileWriter()
     make(merger, data["toc"], data["folder"], None, bookmarks)
     bookmarks.link(merger)
