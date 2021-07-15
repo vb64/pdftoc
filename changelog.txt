@@ -1,0 +1,13 @@
++ Optionally align section borders on an even number of pages
+
+01.07.2021 v.1.1
+----------------
+
++ Create not existing folders
+
++ Print processed file names
+
+29.06.2021 v.1.0
+----------------
+
++ Initial release

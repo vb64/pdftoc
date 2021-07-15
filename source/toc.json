@@ -1,6 +1,7 @@
 {
   "target": "build/output/Merged report.pdf",
   "folder": "fixtures",
+  "evenpages": 1,
   "toc": [
     ["Level 0", "", [
       ["Level 1", "{f}example.pdf", []],
