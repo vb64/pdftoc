@@ -45,7 +45,7 @@ If you want to align sections borders in resulting pdf on an even number of page
   "evenpages": 1,
 ```
 
-You can download the ready [win64 binary executable](https://github.com/vb64/pdftoc/releases/download/v.1.1/pdftoc.exe) or create your version from sources.
+You can download the ready [win64 binary executable](https://github.com/vb64/pdftoc/releases/download/v.1.2/pdftoc.exe) or create your version from sources.
 
 Download and install:
 
