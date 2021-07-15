@@ -37,6 +37,14 @@ Use the following `toc.json` file:
 
 Sequence "{f}" is optional placeholder. It will be replaced with the value of "folder" key ('fixtures' in the given example).
 
+If you want to align sections borders in resulting pdf on an even number of pages (for example when printing hard copy), you can use `evenpages` key in json file.
+
+```json
+{
+  "target": "Merged_report.pdf",
+  "evenpages": 1,
+```
+
 You can download the ready [win64 binary executable](https://github.com/vb64/pdftoc/releases/download/v.1.1/pdftoc.exe) or create your version from sources.
 
 Download and install:

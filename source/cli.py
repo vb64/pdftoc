@@ -6,7 +6,7 @@ from optparse import OptionParser  # pylint: disable=deprecated-module
 from PyPDF2 import PdfFileReader, PdfFileWriter
 
 COPYRIGHTS = 'Copyrights by Vitaly Bogomolov 2021'
-VERSION = '1.1'
+VERSION = '1.2'
 
 OPTS = None
 PARSER = OptionParser(
@@ -52,7 +52,7 @@ class Bookmarks:
             i.add(merger)
 
 
-def make(merger, toc, default_folder, parent, bookmarks):
+def make(merger, toc, default_folder, parent, bookmarks, evenpages):
     """Join several pdf files to target."""
     for title, pdf, childs in toc:
         if pdf.startswith(FOLDER):
@@ -64,9 +64,11 @@ def make(merger, toc, default_folder, parent, bookmarks):
         if pdf:
             print(pdf)
             merger.appendPagesFromReader(PdfFileReader(open(pdf, 'rb')))  # pylint: disable=consider-using-with
+            if evenpages and (merger.getNumPages() % 2):
+                merger.addBlankPage()
 
         if childs:
-            make(merger, childs, default_folder, new_parent, bookmarks)
+            make(merger, childs, default_folder, new_parent, bookmarks, evenpages)
 
     return 0
 
@@ -81,7 +83,7 @@ def main(argv, _options):
     bookmarks = Bookmarks()
     data = json.loads(open(argv[0], encoding='utf-8').read())  # pylint: disable=consider-using-with
     merger = PdfFileWriter()
-    make(merger, data["toc"], data["folder"], None, bookmarks)
+    make(merger, data["toc"], data["folder"], None, bookmarks, bool(data.get('evenpages', False)))
     bookmarks.link(merger)
 
     path = os.path.dirname(data["target"])
