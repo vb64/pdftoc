@@ -1,3 +1,6 @@
+15.07.2021 v.1.2
+----------------
+
 + Optionally align section borders on an even number of pages
 
 01.07.2021 v.1.1
